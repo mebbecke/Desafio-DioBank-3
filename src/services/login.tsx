@@ -6,6 +6,5 @@ export const login = async (email: string): Promise<boolean> => {
     if(email !== data.email) {
         return false
     }
-
     return true
 }

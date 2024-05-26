@@ -1,9 +1,22 @@
-import { Box } from "@chakra-ui/react";
+import { Card } from "@chakra-ui/react"
 
-export const Card = ({ children }: any) => {
+interface ICard {
+  id: string,
+  children: any;
+}
+
+export const DCard = ({ children }: any) => {
+
   return (
-    <Box backgroundColor="#FFFFFF" borderRadius="25px" padding="15px">
-      { children }
-    </Box>
-  );
-};
+      <Card
+        boxSize='sm'
+        align='center'
+        boxShadow='xl'
+        bg='#73818f'
+        textColor='white'
+      >
+        { children }
+        
+      </Card>
+  )
+}
