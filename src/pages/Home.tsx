@@ -9,14 +9,15 @@ import { changeLocalStorage } from "../services/storage";
 
 const Home = () => {
   const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
   const { setIsLoggedIn } = useContext(AppContext);
   const navigate = useNavigate();
 
-  const validateUser = async (email: string) => {
-    const loggedIn = await login(email);
+  const validateUser = async (email: string, password: string) => {
+    const loggedIn = await login(email, password);
 
     if (!loggedIn) {
-      alert("E-mail inválido!");
+      alert("E-mail ou senha inválidos!");
     } else {
       setIsLoggedIn(true);
       changeLocalStorage({ login: true });
@@ -49,10 +50,11 @@ const Home = () => {
               _placeholder={{ opacity: 1 }}
               _focus={{ bg: "#e3e5e8" }}
               variant="filled"
+              onChange={(event) => setPassword(event.target.value)}
             />
             <DButton
               id="login"
-              onClick={() => validateUser(email)}
+              onClick={() => validateUser(email, password)}
               text="Entrar"
             />
           </CardBody>
