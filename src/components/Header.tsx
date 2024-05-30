@@ -9,7 +9,7 @@ export const Header = () => {
   const navigate = useNavigate();
 
   const logout = () => {
-    changeLocalStorage({ login: false });
+    changeLocalStorage({ login: false, user: '', email: '' });
     setIsLoggedIn(false);
     navigate("/");
   };
@@ -29,7 +29,7 @@ export const Header = () => {
           fontSize="30px"
           fontWeight="bold"
         >
-          Dio Bank
+          DIO Bank
         </Box>
         {isLoggedIn && (
           <>

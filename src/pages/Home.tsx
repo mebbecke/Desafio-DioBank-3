@@ -10,7 +10,7 @@ import { changeLocalStorage } from "../services/storage";
 const Home = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const { setIsLoggedIn } = useContext(AppContext);
+  const { user, setIsLoggedIn } = useContext(AppContext);
   const navigate = useNavigate();
 
   const validateUser = async (email: string, password: string) => {
@@ -20,7 +20,7 @@ const Home = () => {
       alert("E-mail ou senha inválidos!");
     } else {
       setIsLoggedIn(true);
-      changeLocalStorage({ login: true });
+      changeLocalStorage({ login: true, email: email, user: user });
       navigate("/conta/1");
     }
   };

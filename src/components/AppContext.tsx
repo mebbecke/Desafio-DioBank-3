@@ -11,7 +11,7 @@ export const AppContext = createContext({} as IAppContext);
 
 export const AppContextProvider = ({ children }: any) => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-
+  const user = "marina";
   const storage = getAllLocalStorage();
 
   useEffect(() => {
@@ -20,8 +20,6 @@ export const AppContextProvider = ({ children }: any) => {
       setIsLoggedIn(login);
     }
   }, []);
-
-  const user = "marina";
 
   return (
     <AppContext.Provider value={{ user, isLoggedIn, setIsLoggedIn }}>
