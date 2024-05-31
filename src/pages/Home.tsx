@@ -3,15 +3,19 @@ import { DCard } from "../components/Card";
 import { MouseEventHandler, useContext, useState } from "react";
 import { DButton } from "../components/Button";
 import { login } from "../services/login";
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import { AppContext } from "../components/AppContext";
 import { changeLocalStorage } from "../services/storage";
 
 const Home = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const { user, setIsLoggedIn } = useContext(AppContext);
+  const { user, setIsLoggedIn, isLoggedIn } = useContext(AppContext);
   const navigate = useNavigate();
+
+  if (isLoggedIn){
+    navigate('/conta/1');
+  }
 
   const validateUser = async (email: string, password: string) => {
     const loggedIn = await login(email, password);
