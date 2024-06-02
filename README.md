@@ -34,9 +34,9 @@ desenvolvido por [Nathally Souza](https://github.com/nathyts)
   - Caso a usuária não esteja logada, deve ser mantida na página com a tela de login
   - Escreva os testes unitários para as funções criadas ou refatoradas.
 
-[ ] Fazer o deploy no Netlify e compartilhar o link da página
+[x] Fazer o deploy no Netlify e compartilhar o link da página
 
 # Acesse a aplicação
-Link:
-E-mail de teste: ma@dio.bank
-Senha de teste: 123456
+- Link: https://diobank3.netlify.app/
+- E-mail de teste: ma@dio.bank
+- Senha de teste: 123456
