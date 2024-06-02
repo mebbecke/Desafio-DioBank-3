@@ -35,3 +35,8 @@ desenvolvido por [Nathally Souza](https://github.com/nathyts)
   - Escreva os testes unitários para as funções criadas ou refatoradas.
 
 [ ] Fazer o deploy no Netlify e compartilhar o link da página
+
+# Acesse a aplicação
+Link:
+E-mail de teste: ma@dio.bank
+Senha de teste: 123456

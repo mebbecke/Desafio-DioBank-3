@@ -1,4 +1,4 @@
-import { Box, CardBody, CardHeader, Heading, Input } from "@chakra-ui/react";
+import { Box, CardBody, CardHeader, Center, Heading, Input } from "@chakra-ui/react";
 import { DCard } from "../components/Card";
 import { useContext, useState } from "react";
 import { DButton } from "../components/Button";
@@ -30,6 +30,7 @@ const Home = () => {
   };
 
   return (
+    <Center padding="20px">
     <Box>
       <DCard id="login">
         <>
@@ -65,6 +66,7 @@ const Home = () => {
         </>
       </DCard>
     </Box>
+    </Center>
   );
 };
 

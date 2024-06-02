@@ -1,10 +1,5 @@
 import { Card } from "@chakra-ui/react"
 
-interface ICard {
-  id: string,
-  children: any;
-}
-
 export const DCard = ({ children }: any) => {
 
   return (

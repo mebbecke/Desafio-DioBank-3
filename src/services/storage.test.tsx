@@ -2,7 +2,6 @@ import {
   changeLocalStorage,
   createLocalStorage,
   getAllLocalStorage,
-  // checkUserData,
 } from "./storage";
 
 const dioBank = {
