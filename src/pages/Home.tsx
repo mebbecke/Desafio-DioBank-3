@@ -1,9 +1,9 @@
 import { Box, CardBody, CardHeader, Heading, Input } from "@chakra-ui/react";
 import { DCard } from "../components/Card";
-import { MouseEventHandler, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { DButton } from "../components/Button";
 import { login } from "../services/login";
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AppContext } from "../components/AppContext";
 import { changeLocalStorage } from "../services/storage";
 

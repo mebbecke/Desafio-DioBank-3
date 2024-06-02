@@ -7,9 +7,6 @@ export const Layout = ({ children }: any) => {
       <Box
         minHeight="100vh"
         backgroundColor="#1e192c"
-        // display="flex"
-        // flexWrap="wrap"
-        // justifyContent="center"
       >
         <Header />
         {children}
